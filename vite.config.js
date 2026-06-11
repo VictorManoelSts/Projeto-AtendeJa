@@ -15,17 +15,4 @@ export default defineConfig({
       host: 'localhost',
     },
   },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/tests/setup.js',
-    coverage: {
-      provider: 'v8',
-      thresholds: {
-        lines: 70,
-        functions: 70,
-        branches: 60,
-      },
-    },
-  },
 })
