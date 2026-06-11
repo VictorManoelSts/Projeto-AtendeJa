@@ -15,7 +15,7 @@ export const prontuarios = [
     historicoClinco: 'Gestação de 28 semanas. Primigesta. Pré-natal regular com 7 consultas realizadas. Sem intercorrências anteriores.',
     alergias: [],
     doencasCronicas: [],
-    medicamentosUsoContinuo: ['ácido fólico 400mcg/dia', 'sulfato ferroso 40mg/dia'],
+    medicamentosUsoContinuo: ['ácido fólico 400 mcg/dia', 'sulfato ferroso 40 mg/dia'],
   },
   {
     id: 'prt-3',
@@ -24,16 +24,16 @@ export const prontuarios = [
     historicoClinco: 'Hipertensão arterial sistêmica diagnosticada em 2015. Cardiopatia isquêmica leve. Ex-tabagista há 10 anos.',
     alergias: ['penicilina'],
     doencasCronicas: ['hipertensão arterial sistêmica', 'cardiopatia isquêmica'],
-    medicamentosUsoContinuo: ['losartana 50mg/dia', 'AAS 100mg/dia', 'atorvastatina 20mg/dia'],
+    medicamentosUsoContinuo: ['losartana 50 mg/dia', 'AAS 100 mg/dia', 'atorvastatina 20 mg/dia'],
   },
   {
     id: 'prt-4',
     idPaciente: 'pac-4',
     idAtendimento: 'con-4',
-    historicoClinco: 'Paciente com osteoporose diagnosticada. Histórico de fratura de punho em 2022. Hipertensão controlada.',
+    historicoClinco: 'Osteoporose diagnosticada em 2020. Histórico de fratura de punho em 2022. Hipertensão arterial controlada.',
     alergias: ['ibuprofeno', 'AAS'],
     doencasCronicas: ['osteoporose', 'hipertensão arterial sistêmica'],
-    medicamentosUsoContinuo: ['alendronato 70mg/semana', 'carbonato de cálcio 1g/dia', 'anlodipino 5mg/dia'],
+    medicamentosUsoContinuo: ['alendronato 70 mg/semana', 'carbonato de cálcio 1 g/dia', 'anlodipino 5 mg/dia'],
   },
   {
     id: 'prt-5',
@@ -42,6 +42,6 @@ export const prontuarios = [
     historicoClinco: 'Paraplegia por lesão medular traumática desde 2019. Usuário de cadeira de rodas. Sem doenças associadas relevantes.',
     alergias: [],
     doencasCronicas: ['lesão medular T10 completa'],
-    medicamentosUsoContinuo: ['baclofeno 10mg 2x/dia'],
+    medicamentosUsoContinuo: ['baclofeno 10 mg 2×/dia'],
   },
 ]
