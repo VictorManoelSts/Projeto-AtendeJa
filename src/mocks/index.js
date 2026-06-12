@@ -1,0 +1,7 @@
+export * from './data/pacientes'
+export * from './data/medicos'
+export * from './data/consultas'
+export * from './data/fila'
+export * from './data/triagens'
+export * from './data/prontuarios'
+export * from './data/notificacoes'

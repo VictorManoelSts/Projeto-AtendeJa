@@ -1,0 +1,32 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: atendeja-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: atendeja-test
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=test
+    command: npm run test:run
+    profiles:
+      - test
+
+volumes:
+  node_modules:
