@@ -11,5 +11,5 @@ const STATUS_VARIANT = {
 
 export default function StatusBadge({ status }) {
   const variante = STATUS_VARIANT[status] ?? 'neutral'
-  return <Badge texto={status} variante={variante} />
+  return <Badge data-testid="status-badge" texto={status} variante={variante} />
 }

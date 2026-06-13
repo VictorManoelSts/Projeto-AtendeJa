@@ -7,10 +7,11 @@ const VARIANTS = {
   info:    { bg: 'var(--color-primary-bg)',  color: 'var(--color-primary-light)' },
 }
 
-export default function Badge({ texto, variante = 'neutral' }) {
+export default function Badge({ texto, variante = 'neutral', 'data-testid': testId }) {
   const { bg, color } = VARIANTS[variante] ?? VARIANTS.neutral
   return (
     <span
+      data-testid={testId}
       style={{
         backgroundColor: bg,
         color,
