@@ -112,29 +112,31 @@ export default function Reagendamento() {
           Reagendamento
         </h1>
 
-        <div style={{ maxWidth: '540px' }}>
-          <input
-            type="text"
-            placeholder="CPF ou nome do paciente"
-            value={busca}
-            onChange={e => setBusca(e.target.value)}
-            style={{ ...inputStyle, marginBottom: 'var(--space-4)' }}
-          />
+        {/* Dois painéis em lg+: busca/paciente à esquerda, formulário à direita */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-          {busca.trim().length > 0 && matches.length === 0 && (
-            <p style={{ color: '#94A3B8', fontSize: 'var(--text-sm)' }}>
-              Nenhum resultado encontrado.
-            </p>
-          )}
+          {/* Painel esquerdo — busca e lista de consultas */}
+          <div>
+            <input
+              type="text"
+              placeholder="CPF ou nome do paciente"
+              value={busca}
+              onChange={e => setBusca(e.target.value)}
+              style={{ ...inputStyle, marginBottom: 'var(--space-4)' }}
+            />
 
-          {pacEncontrado && (
-            <>
+            {busca.trim().length > 0 && matches.length === 0 && (
+              <p style={{ color: '#94A3B8', fontSize: 'var(--text-sm)' }}>
+                Nenhum resultado encontrado.
+              </p>
+            )}
+
+            {pacEncontrado && (
               <div style={{
                 background: '#FFFFFF',
                 border: '0.5px solid #E2E8F0',
                 borderRadius: 'var(--radius-lg)',
                 padding: 'var(--space-4)',
-                marginBottom: 'var(--space-4)',
               }}>
                 <p style={{ fontWeight: 'var(--font-bold)', color: '#1E293B', marginBottom: 'var(--space-1)' }}>
                   {pacEncontrado.nome}
@@ -177,8 +179,12 @@ export default function Reagendamento() {
                   </ul>
                 )}
               </div>
+            )}
+          </div>
 
-              {/* Formulário de reagendamento */}
+          {/* Painel direito — formulário de reagendamento e registro */}
+          {pacEncontrado && (
+            <div>
               <div style={{
                 background: '#FFFFFF',
                 border: '0.5px solid #E2E8F0',
@@ -298,7 +304,7 @@ export default function Reagendamento() {
                   </div>
                 </div>
               )}
-            </>
+            </div>
           )}
         </div>
       </main>

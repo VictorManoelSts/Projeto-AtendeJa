@@ -80,9 +80,9 @@ export default function Prontuario() {
         )}
 
         {prontuario && (
-          <div style={{ maxWidth: '640px' }}>
-            {/* Histórico clínico */}
-            <div style={secao}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {/* Histórico clínico — ocupa as duas colunas em lg+ */}
+            <div className="lg:col-span-2" style={secao}>
               <p style={tituloSecao}>Histórico Clínico</p>
               <p style={{ fontSize: 'var(--text-sm)', color: '#1E293B', lineHeight: 1.6, margin: 0 }}>
                 {prontuario.historicoClinco}

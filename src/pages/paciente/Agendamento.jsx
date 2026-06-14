@@ -123,7 +123,7 @@ export default function Agendamento() {
           </p>
         )}
 
-        <form onSubmit={handleSubmit} noValidate style={{ maxWidth: '560px', display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
+        <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 sm:grid-cols-2 gap-4" style={{ maxWidth: '560px' }}>
 
           <div>
             <label htmlFor="especialidade" style={labelStyle}>Especialidade</label>
@@ -197,7 +197,7 @@ export default function Agendamento() {
             />
           </div>
 
-          <div style={{ display: 'flex', gap: 'var(--space-3)', marginTop: 'var(--space-2)' }}>
+          <div className="sm:col-span-2" style={{ display: 'flex', gap: 'var(--space-3)', marginTop: 'var(--space-2)' }}>
             <button
               type="submit"
               disabled={carregando}
