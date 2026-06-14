@@ -104,6 +104,8 @@ export default function Login() {
                 background: '#FFFFFF',
                 boxSizing: 'border-box',
                 outline: 'none',
+                WebkitBoxShadow: '0 0 0 1000px #FFFFFF inset',
+                WebkitTextFillColor: '#1E293B',
               }}
             />
           </div>
@@ -139,6 +141,8 @@ export default function Login() {
                   background: '#FFFFFF',
                   boxSizing: 'border-box',
                   outline: 'none',
+                  WebkitBoxShadow: '0 0 0 1000px #FFFFFF inset',
+                  WebkitTextFillColor: '#1E293B',
                 }}
               />
               <button

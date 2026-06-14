@@ -224,7 +224,11 @@ export default function GerenciarFilas() {
                       <td className="hidden lg:table-cell" style={{ ...tdStyle, fontSize: 'var(--text-xs)', color: '#475569' }}>
                         {entrada.prioridade}
                       </td>
-                      <td className="hidden md:table-cell" style={{ ...tdStyle, color: preventivo ? '#CA8A04' : '#475569' }}>
+                      <td
+                        className="hidden md:table-cell"
+                        style={{ ...tdStyle, color: preventivo ? '#CA8A04' : '#475569' }}
+                        {...(preventivo ? { role: 'alert' } : {})}
+                      >
                         {preventivo && (
                           <AlertTriangle size={12} style={{ marginRight: '4px', verticalAlign: 'middle', color: '#CA8A04' }} aria-hidden="true" />
                         )}
