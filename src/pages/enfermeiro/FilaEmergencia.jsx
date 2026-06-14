@@ -131,12 +131,16 @@ export default function FilaEmergencia() {
           <p style={{ color: '#94A3B8', fontSize: 'var(--text-sm)' }}>Fila vazia.</p>
         ) : (
           <div className="overflow-x-auto" style={{ borderRadius: 'var(--radius-lg)', border: '0.5px solid #E2E8F0' }}>
-            <table style={{ minWidth: '720px', width: '100%', borderCollapse: 'collapse', background: '#FFFFFF' }}>
+            <table style={{ minWidth: '600px', width: '100%', borderCollapse: 'collapse', background: '#FFFFFF' }}>
               <thead>
                 <tr style={{ background: '#F8FAFC' }}>
-                  {['Senha', 'Pulseira', 'Paciente', 'Prioridade', 'Espera', 'Status', 'Ações'].map(col => (
-                    <th key={col} style={thStyle}>{col}</th>
-                  ))}
+                  <th style={thStyle}>Senha</th>
+                  <th style={thStyle}>Pulseira</th>
+                  <th style={thStyle}>Paciente</th>
+                  <th className="hidden lg:table-cell" style={thStyle}>Prioridade</th>
+                  <th className="hidden md:table-cell" style={thStyle}>Espera</th>
+                  <th style={thStyle}>Status</th>
+                  <th style={thStyle}>Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -185,12 +189,12 @@ export default function FilaEmergencia() {
                       </td>
 
                       {/* Prioridade legal */}
-                      <td style={{ ...tdStyle, fontSize: 'var(--text-xs)', color: '#475569' }}>
+                      <td className="hidden lg:table-cell" style={{ ...tdStyle, fontSize: 'var(--text-xs)', color: '#475569' }}>
                         {pac?.prioridade ?? '—'}
                       </td>
 
                       {/* Tempo de espera */}
-                      <td style={tdStyle}>
+                      <td className="hidden md:table-cell" style={tdStyle}>
                         {isCritico ? (
                           <span
                             role="alert"

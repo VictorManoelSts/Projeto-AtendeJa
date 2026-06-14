@@ -99,7 +99,7 @@ export default function AdminDashboard() {
         </h1>
 
         {/* Métricas */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 'var(--space-3)', marginBottom: 'var(--space-6)' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3" style={{ marginBottom: 'var(--space-6)' }}>
           <div style={cardStyle}>
             <p style={labelStyle}>Pacientes cadastrados</p>
             <p data-testid="total-pacientes-value" style={valueStyle}>{totalPacientes}</p>

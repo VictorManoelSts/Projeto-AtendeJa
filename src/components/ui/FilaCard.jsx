@@ -27,12 +27,12 @@ export default function FilaCard({ paciente, posicao, tempoEstimado, status, onS
 
   return (
     <div
+      className="w-full md:max-w-md mx-auto"
       style={{
         background: 'var(--color-bg-white)',
         border: '0.5px solid var(--color-border)',
         borderRadius: 'var(--radius-lg)',
         padding: 'var(--space-4) var(--space-6)',
-        maxWidth: '420px',
       }}
     >
       {critico && (

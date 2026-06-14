@@ -68,6 +68,17 @@ export function cancelar(id) {
   return Promise.resolve({ ...consulta })
 }
 
+export function confirmarCheckin(id, origemCheckin) {
+  const consulta = _estado.find(c => c.id === id)
+  if (!consulta) {
+    return Promise.reject(new Error('Consulta não encontrada'))
+  }
+  consulta.status = 'CONFIRMADO'
+  consulta.origemCheckin = origemCheckin
+  consulta.dataCheckin = new Date().toISOString()
+  return Promise.resolve({ ...consulta })
+}
+
 export function reagendar(id, data, motivo) {
   if (!motivo?.trim()) {
     return Promise.reject(new Error('Motivo é obrigatório para reagendamento'))

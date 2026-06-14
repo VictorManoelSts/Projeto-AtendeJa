@@ -132,6 +132,15 @@ export function sairDaFila(idFila) {
   return Promise.resolve({ ...entrada })
 }
 
+export function reabrirAtendimento(idFila) {
+  const entrada = _estado.find(e => e.id === idFila)
+  if (!entrada) {
+    return Promise.reject(new Error('Entrada não encontrada'))
+  }
+  entrada.status = 'AGUARDANDO'
+  return Promise.resolve({ ...entrada })
+}
+
 export function encerrarAtendimento(idFila) {
   const entrada = _estado.find(e => e.id === idFila)
   if (!entrada) {

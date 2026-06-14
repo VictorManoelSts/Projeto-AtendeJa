@@ -45,9 +45,8 @@ export default function Login() {
       }}
     >
       <div
+        className="w-full max-w-sm"
         style={{
-          width: '100%',
-          maxWidth: '380px',
           background: '#F8FAFC',
           border: '0.5px solid #CBD5E1',
           borderRadius: 'var(--radius-lg)',

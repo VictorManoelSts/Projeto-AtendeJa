@@ -188,12 +188,15 @@ export default function GerenciarFilas() {
           <p style={{ color: '#94A3B8', fontSize: 'var(--text-sm)' }}>Fila vazia.</p>
         ) : (
           <div className="overflow-x-auto" style={{ borderRadius: 'var(--radius-lg)', border: '0.5px solid #E2E8F0' }}>
-            <table style={{ minWidth: '720px', width: '100%', borderCollapse: 'collapse', background: '#FFFFFF' }}>
+            <table style={{ minWidth: '600px', width: '100%', borderCollapse: 'collapse', background: '#FFFFFF' }}>
               <thead>
                 <tr style={{ background: '#F8FAFC' }}>
-                  {['Senha', 'Paciente', 'Prioridade', 'Espera', 'Status', 'Ações'].map(col => (
-                    <th key={col} style={thStyle}>{col}</th>
-                  ))}
+                  <th style={thStyle}>Senha</th>
+                  <th style={thStyle}>Paciente</th>
+                  <th className="hidden lg:table-cell" style={thStyle}>Prioridade</th>
+                  <th className="hidden md:table-cell" style={thStyle}>Espera</th>
+                  <th style={thStyle}>Status</th>
+                  <th style={thStyle}>Ações</th>
                 </tr>
               </thead>
               <tbody>
@@ -218,10 +221,10 @@ export default function GerenciarFilas() {
                       <td style={tdStyle}>
                         {pac?.nome ?? '—'}
                       </td>
-                      <td style={{ ...tdStyle, fontSize: 'var(--text-xs)', color: '#475569' }}>
+                      <td className="hidden lg:table-cell" style={{ ...tdStyle, fontSize: 'var(--text-xs)', color: '#475569' }}>
                         {entrada.prioridade}
                       </td>
-                      <td style={{ ...tdStyle, color: preventivo ? '#CA8A04' : '#475569' }}>
+                      <td className="hidden md:table-cell" style={{ ...tdStyle, color: preventivo ? '#CA8A04' : '#475569' }}>
                         {preventivo && (
                           <AlertTriangle size={12} style={{ marginRight: '4px', verticalAlign: 'middle', color: '#CA8A04' }} aria-hidden="true" />
                         )}
